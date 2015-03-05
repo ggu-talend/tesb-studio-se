@@ -23,7 +23,7 @@
 		org.talend.core.model.utils.NodeUtil
 	" 
 	class="SubProcessHeader"
-	skeleton="subprocess_header_java.skeleton"
+	skeleton="platform:/plugin/org.talend.designer.codegen/resources/subprocess_header_java.skeleton"
 %>
 <%
 	CodeGeneratorArgument codeGenArgument = (CodeGeneratorArgument) argument;

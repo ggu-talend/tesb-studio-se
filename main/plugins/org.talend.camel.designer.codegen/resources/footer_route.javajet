@@ -13,7 +13,7 @@
 		org.talend.core.model.process.ElementParameterParser
 	" 
 	class="Footer" 
-	skeleton="footer_java.skeleton"	
+	skeleton="platform:/plugin/org.talend.designer.codegen/resources/footer_java.skeleton"	
 %>
 <%
 	CodeGeneratorArgument codeGenArgument = (CodeGeneratorArgument) argument;
