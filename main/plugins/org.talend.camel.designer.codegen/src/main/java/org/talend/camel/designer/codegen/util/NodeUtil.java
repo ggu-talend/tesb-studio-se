@@ -4,43 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang.StringUtils;
 import org.talend.camel.designer.codegen.i18n.Messages;
-import org.talend.core.model.components.IComponent;
-import org.talend.core.model.components.IComponentFileNaming;
 import org.talend.core.model.process.EConnectionType;
 import org.talend.core.model.process.IConnection;
 import org.talend.core.model.process.IElementParameter;
 import org.talend.core.model.process.INode;
-import org.talend.core.model.temp.ECodePart;
-import org.talend.core.ui.component.ComponentsFactoryProvider;
-import org.talend.designer.codegen.config.TemplateUtil;
 
 public class NodeUtil {
-
-    public static String getTemplateURI(INode node, ECodePart part) {
-        return getTemplateURI(node.getComponent(), part);
-    }
-
-    public static String getTemplateURI(IComponent component, ECodePart part) {
-        String bundle = component.getPathSource();
-        String path = component.getName();
-
-        IComponentFileNaming fileNaming = ComponentsFactoryProvider.getFileNamingInstance();
-        String file = fileNaming.getJetFileName(component, ProcessUtil.getCodeLanguageExtension(), part);
-
-        return getTemplateURI(bundle, path, file);
-    }
-
-    /**
-     * Gets the template uri.
-     *
-     * @param paths the paths starts from bundle id.
-     * @return the template uri
-     */
-    public static String getTemplateURI(String... paths) {
-        return StringUtils.join(paths, TemplateUtil.DIR_SEP);
-    };
 
     /**
      * DOC xtan for debug
